@@ -7,7 +7,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git 'https://github.com/Muaz-Ar/jenkins_demo'
+                git branch: 'main', url: 'https://github.com/Muaz-Ar/jenkins_demo'
             }
         }
         stage('Build') {
