@@ -1,14 +1,11 @@
-def get_user_input():
-    return input("Wie lautet Ihre Lieblingsfarbe? ")
-
-def save_answer(answer):
-    with open("answers.txt", "a") as file:
-        file.write(answer + "\n")
+def write_message_to_file():
+    message = "Hallo von Jenkins!"
+    with open("output.txt", "w") as file:
+        file.write(message)
 
 def main():
-    answer = get_user_input()
-    save_answer(answer)
-    print("Ihre Antwort wurde gespeichert.")
+    write_message_to_file()
+    print("Nachricht wurde in output.txt geschrieben.")
 
 if __name__ == "__main__":
     main()
