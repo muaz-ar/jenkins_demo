@@ -7,22 +7,22 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git 'https://github.com/your-username/your-repo.git'
+                git 'https://github.com/Muaz-Ar/jenkins_demo'
             }
         }
         stage('Build') {
             steps {
-                sh 'pip install -r myapp/requirements.txt'
+                sh 'pip install -r projekt_docker/requirements.txt'
             }
         }
         stage('Test') {
             steps {
-                sh 'python3 myapp/tests.py'
+                sh 'python3 projekt_docker/tests.py'
             }
         }
         stage('Run') {
             steps {
-                sh 'python3 myapp/main.py'
+                sh 'python3 projekt_docker/main.py'
             }
         }
     }
